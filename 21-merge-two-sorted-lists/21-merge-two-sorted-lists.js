@@ -25,5 +25,6 @@ var mergeTwoLists = function(list1, list2) {
         list1 = list1.next;
     }
     head.next = mergeTwoLists(list1, list2);
+  
     return head;
 };
