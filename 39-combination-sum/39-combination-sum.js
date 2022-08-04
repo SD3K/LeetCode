@@ -11,13 +11,13 @@ function combinationSum(candidates, target) {
     if (sum === target) {
       solution.push([...innerSol]);
     } 
+    
     for (let i = index; i < candidates.length; i++) {
-      let innerSum = sum + candidates[i];
 
-      if (innerSum <= target) {
+      if (sum + candidates[i] <= target) {
         innerSol.push(candidates[i]);
 
-        getSums(i, innerSum);
+        getSums(i, sum + candidates[i]);
 
         innerSol.pop();
       }
