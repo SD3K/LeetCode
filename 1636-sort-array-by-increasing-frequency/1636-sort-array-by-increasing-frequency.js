@@ -13,5 +13,6 @@ function frequencySort(nums) {
       }
   };
   
-  return nums.sort((a,b) => map[a] - map[b] || b - a);
+  nums.sort((a,b) => map[a] - map[b] || b - a);
+  return nums;
 };
