@@ -7,7 +7,7 @@ function frequencySort(nums) {
   
   for (let i = 0; i < nums.length; i++) {
     if (map[nums[i]] === undefined) {
-      map[nums[i]] = 0;
+      map[nums[i]] = 1;
     } else {
       map[nums[i]]++
       }
