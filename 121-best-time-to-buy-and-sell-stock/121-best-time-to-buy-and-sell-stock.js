@@ -4,14 +4,6 @@
  */
 function maxProfit(prices) {
   let result = 0;
-  // // Brute Force
-  // for (let i = 0; i < prices.length; i++) {
-  //   for (let j = prices.length - 1; j > i; j--) {
-  //     if (prices[j] - prices[i] > 0) {
-  //       result = Math.max(result, prices[j] - prices[i]);
-  //     }
-  //   }
-  // }
   let low = undefined;
   let high = 0;
   for (let i = 0; i < prices.length; i++) {
