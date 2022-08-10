@@ -3,23 +3,24 @@
  * @return {number[]}
  */
 function dailyTemperatures(temperatures) {
-  const result = [];
   const n = temperatures.length;
+  const result = new Array(n).fill(0);
+  const stack = [];
   
-  for (let i = 0; i < n; i++) {
-    const currentTemp = temperatures[i];
-    let nextHigh = i + 1;
-    
-    while (currentTemp >= temperatures[nextHigh] && nextHigh < n) {
-      nextHigh++;
+  for (let i = n - 1; i >= 0; i--) {
+    while (temperatures[stack[stack.length - 1]] <= temperatures[i] && stack.length > 0) {
+      stack.pop();
+    }
+
+    if (stack.length === 0) {
+      stack.push(i);
+      continue;
     }
     
-    if (temperatures[nextHigh] - currentTemp > 0) {
-      result.push(nextHigh - i);
-    } else {
-      result.push(0);
+    if (temperatures[stack[stack.length - 1]] > temperatures[i]) {
+      result[i] = stack[stack.length - 1] - i;
+      stack.push(i);
     }
   }
-  
   return result;
-};
+}
