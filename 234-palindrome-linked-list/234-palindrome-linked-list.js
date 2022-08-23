@@ -10,11 +10,11 @@
  * @return {boolean}
  */
 function isPalindrome(head) {
-  let palStr = '';
+  let palStr = [];
   
   while (head) {
-    palStr = palStr + head.val;
-    head = head.next
+    palStr.push(head.val);
+    head = head.next;
   }
   
   for (let i = 0; i < palStr.length / 2; i++) {
