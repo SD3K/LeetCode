@@ -10,10 +10,10 @@
  * @param {TreeNode} root
  * @return {number}
  */
-const goodNodes = (root) => {
+function goodNodes(root) {
   let count = 0;
   
-  const dfs = (root, max = root.val) => {
+  function dfs(root, max = root.val) {
     if (!root) {
       return;
     }
