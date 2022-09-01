@@ -19,7 +19,7 @@ function goodNodes(root) {
     }
     if (root.val >= max) {
       count++;
-      max = Math.max(max, root.val);
+      max = root.val;
     }
     
     dfs(root.left, max);
