@@ -16,7 +16,7 @@ function averageOfLevels(root) {
   }
   const result = [];
   
-  result.push([root.val]);
+  result.push(root.val);
   
   const nextLevel = function(...nodes) {
     let innerRes = [];
