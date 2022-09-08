@@ -11,17 +11,16 @@
  * @return {number[]}
  */
 function inorderTraversal(root) {
-  const solution = [];
   
-  function dfs(node) {
+  function dfs(node, traversal = []) {
     if (!node) {
-      return
+      return traversal;
     }
-    dfs(node.left);
-    solution.push(node.val);
-    dfs(node.right);
+    dfs(node.left, traversal);
+    traversal.push(node.val);
+    dfs(node.right, traversal);
+    return traversal;
   }
   
-  dfs(root);
-  return solution;
+  return dfs(root);
 };
