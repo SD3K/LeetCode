@@ -11,9 +11,7 @@
  * @return {number[]}
  */
 function inorderTraversal(node, traversal = []) {
-  if (!node) {
-    return traversal;
-  }
+  if (!node) return traversal;
   inorderTraversal(node.left, traversal);
   traversal.push(node.val);
   inorderTraversal(node.right, traversal);
