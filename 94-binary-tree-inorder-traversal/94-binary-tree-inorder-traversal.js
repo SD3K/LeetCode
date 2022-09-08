@@ -10,17 +10,12 @@
  * @param {TreeNode} root
  * @return {number[]}
  */
-function inorderTraversal(root) {
-  
-  function dfs(node, traversal = []) {
-    if (!node) {
-      return traversal;
-    }
-    dfs(node.left, traversal);
-    traversal.push(node.val);
-    dfs(node.right, traversal);
+function inorderTraversal(node, traversal = []) {
+  if (!node) {
     return traversal;
   }
-  
-  return dfs(root);
+  inorderTraversal(node.left, traversal);
+  traversal.push(node.val);
+  inorderTraversal(node.right, traversal);
+  return traversal;
 };
