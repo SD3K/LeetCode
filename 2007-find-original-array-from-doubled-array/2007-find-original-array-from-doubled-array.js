@@ -33,7 +33,7 @@ function findOriginalArray(changed) {
         map.set(key[0], (map.get(key[0]) - 1));
         map.set(key[0] * 2, (map.get(key[0] * 2) - 1));
       }
-    } else if (map.has(key[0] / 2) /*&& map.get(key[0]) === map.get(key[0] / 2)*/) {
+    } else if (map.has(key[0] / 2)) {
       continue;
     } else {
       return [];
