@@ -27,15 +27,6 @@ function findDuplicate(paths) {
     }
   }
   
-  // for (let i = 0; i < paths.length; i++) {
-  //   let content = paths[i].substring(paths[i].indexOf('(') + 1, paths[i].indexOf(')'));
-  //   if (map[content] !== undefined) {
-  //     map[content].push(paths[i].substring(0, paths[i].indexOf('(')));
-  //   } else {
-  //     map[content] = [paths[i].substring(0, paths[i].indexOf('('))];
-  //   }
-  // }
-  
   for (let key in map) {
     if (map[key].length > 1) {
       solution.push(map[key]);
