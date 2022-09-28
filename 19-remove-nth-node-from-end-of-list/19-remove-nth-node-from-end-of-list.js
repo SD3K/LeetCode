@@ -14,7 +14,6 @@ function removeNthFromEnd(head, n) {
   const stack = [];
   if (head.next === null) return head.next;
   let node = head;
-  // let start = 0;
   
   while (node) {
     stack.push(node);
