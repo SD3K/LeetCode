@@ -31,6 +31,7 @@ function letterCombinations(digits) {
       }
     }
   }
+
   buildWords();
   return res;
 };
