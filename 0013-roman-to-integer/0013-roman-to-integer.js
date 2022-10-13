@@ -17,7 +17,8 @@ function romanToInt(s) {
   
   for (let i = 0; i < s.length; i++) {
     s[i + 1] !== undefined && roman[s[i]] < roman[s[i + 1]] ?
-      num -= roman[s[i]] : num += roman[s[i]];
+      num -= roman[s[i]] :
+      num += roman[s[i]];
   }
 
   return num;
